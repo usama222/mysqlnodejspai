@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 // require("./src/config/db");
 const router = require('./src/routes/route');
-// const createError = require("http-errors");
+const createError = require("http-errors");
 
 const port = process.env.PORT || 5000;
 
