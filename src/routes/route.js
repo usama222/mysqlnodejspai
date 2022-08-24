@@ -11,11 +11,17 @@ const UserController = require('../controllers/UserController');
 // router.post('/employee', EmployeeController.InsertEmployee);
 // router.get('/employees', EmployeeController.Index);
 
+// router.get('/roles', RoleController.show);
+// router.post('/roles/store', RoleController.store);
+// router.get('/roles/:id', RoleController.edit);
+// router.put('/roles/:id', RoleController.update);
+// router.delete('/roles/:id', RoleController.delete)
+
 router.get('/roles', RoleController.show);
 router.post('/roles/store', RoleController.store);
-router.get('/roles/:id', RoleController.edit);
-router.put('/roles/:id', RoleController.update);
-router.delete('/roles/:id', RoleController.delete)
+router.get('/roles/edit/:id', RoleController.edit);
+router.put('/roles/update', RoleController.update);
+router.delete('/roles/delete/:id', RoleController.delete)
 
 router.get('/customers', CustomerController.show);
 router.post('/customers/store', CustomerController.store);
