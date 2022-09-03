@@ -13,8 +13,8 @@ const con = mysql.createConnection({
 //     port: '3306',
 //     database: 'mysqlnodejs',
 
-con.connect((err) => {
-    if (err) throw err;
-    console.log("Connected");
-});
+// con.connect((err) => {
+//     if (err) throw err;
+//     console.log("Connected");
+// });
 module.exports = con;
