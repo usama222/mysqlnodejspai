@@ -4,7 +4,7 @@ const app = express();
 const router = require('./src/routes/route');
 const createError = require("http-errors");
 
-const port = process.env.PORT || 4000;
+// const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
@@ -27,6 +27,6 @@ app.use((err, req, res, next) => {
         },
     })
 })
-app.listen(port, () => {
+app.listen(process.env.PORT || 4000, () => {
     // console.log("listen");
 });
