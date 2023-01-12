@@ -4,7 +4,7 @@ const app = express();
 const router = require('./src/routes/route');
 const createError = require("http-errors");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
