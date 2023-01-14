@@ -5,7 +5,9 @@ const CreateError = require('http-errors');
 
 module.exports = {
     show: async (req, res, next) => {
-        con.query("SELECT * FROM roles", (err, result) => {
+        let pageno = (req.query.page == undefined ? 0 : req.query.page);
+        let limit = (req.query.limit == undefined ? 10 : req.query.limit);
+        con.query("SELECT * FROM roles LIMIT " + pageno + ", " + limit + "", (err, result) => {
             if (err) return next(CreateError(500));
             if (result == '') return next(CreateError(404));
             res.status(200).send(result);
