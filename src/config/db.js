@@ -1,14 +1,13 @@
-const mysql = require('mysql');
-require('dotenv').config()
+require('dotenv').config();
+const mysql = require('mysql2');
 const con = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
-
 });
-
+// var con = mysql.createConnection('mysql://root:R5P0rVjqUZDU2kMdupw6@containers-us-west-194.railway.app:6787/railway');
 // const con = mysql.createConnection({
 //     host: 'localhost',
 //     user: 'root',

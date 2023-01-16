@@ -17,7 +17,7 @@
     "http-errors": "^2.0.0",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.0.1",
     "nodemon": "^2.0.19",
     "validatorjs": "^3.22.1"
   }
