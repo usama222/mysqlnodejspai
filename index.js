@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
 // require("./src/config/db");
@@ -28,6 +27,6 @@ app.use((err, req, res, next) => {
         },
     })
 })
-app.listen(process.env.DB_PORT || 4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log("listen");
 });
